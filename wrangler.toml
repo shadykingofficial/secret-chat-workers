@@ -1,0 +1,17 @@
+name = "secret-chat"
+main = "index.js"  # 或者是你的文件名，比如 worker.js
+compatibility_date = "2024-01-01"
+
+# 1. 绑定 KV 命名空间
+# 这里的 binding = "CHAT_KV" 对应代码里的 env.CHAT_KV
+# id 需要替换为你实际创建的 KV 的 ID
+[[kv_namespaces]]
+binding = "CHAT_KV"
+id = "64bf0f49c41342b0a2833d6f63be9164"
+
+# 2. 绑定 Durable Object
+# 这里的 name = "CHAT_ROOM" 对应代码里的 env.CHAT_ROOM
+# class_name = "ChatRoom" 对应代码里的 export class ChatRoom
+[[durable_objects.bindings]]
+name = "CHAT_ROOM"
+class_name = "ChatRoom"
