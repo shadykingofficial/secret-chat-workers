@@ -1,4 +1,4 @@
-name = "secret-chat"
+name = "secret-chat-workers"
 main = "index.js"  # 或者是你的文件名，比如 worker.js
 compatibility_date = "2024-01-01"
 
